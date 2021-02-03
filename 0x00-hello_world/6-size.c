@@ -1,7 +1,18 @@
+#include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
-printf   char
+int main(void)
+{
 
-
-printf  float
-printf 
+printf("Size of a char: %zu byte(s)\nsizeof(char));
+printf("Size of an int: 4 byte(s)\n, sizeof(int));
+printf("Size of a long int: 8 byte(s)\n, sizeof(long int));
+printf("Size of a long long int: 8 byte(s)\n, sizeof(long long int));
+printf("Size of a float: 4 byte(s)\n, sizeof(float));
+return (0);
+} 
