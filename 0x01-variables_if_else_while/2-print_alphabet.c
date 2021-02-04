@@ -2,8 +2,7 @@
 
 int main(void)
 {
-
-char alphabet
+char alphabet;
 
 alphabet = 'a';
 
