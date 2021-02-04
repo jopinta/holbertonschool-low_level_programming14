@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(void)
+{
+
+char alphabet
+
+alphabet = 'a';
+
+for (; alphabet <= 'z'; alphabet++)
+{
+putchar(alphabet);
+}
+return (0);
+}
