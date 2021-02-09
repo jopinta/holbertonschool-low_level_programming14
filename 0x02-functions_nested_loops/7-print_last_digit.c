@@ -1,19 +1,24 @@
 #include "holberton.h"
 
 /**
- * _abs - compute the absolute value of an integer.
- *@x: it's what we do
+ * print_last_digit - print las digit
+ *@num: last would be first
  * Return: Always 0.
  */
 
-int print_last_digit(int)
-
-	int _abs(int x)
+int print_last_digit(int num)
 {
-	if (x < 0)
+	int x = num % 10;
+
+	if (x >= 0)
 	{
-		return (-x);
+		_putchar(x + '0');
+		return (x);
 	}
 
-	return (x);
+	else
+	{
+		_putchar(-x + '0');
+		return (-x);
+	}
 }
