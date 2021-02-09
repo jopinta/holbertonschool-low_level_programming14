@@ -1,10 +1,10 @@
 #include "holberton.h"
 
 /**
-* main - check the code for Holberton School students.
-*
-* Return: Always 0.
-*/
+ * main - holberton followed by a newline
+ *
+ * Return: zero
+ */
 
 int main(void)
 {
