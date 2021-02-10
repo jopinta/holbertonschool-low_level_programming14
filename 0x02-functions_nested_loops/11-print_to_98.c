@@ -1,66 +1,41 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
- * print_int - return void
- *@value: number to print
+ * print_to_98 - Entada
+ * @n: inicio
  *
- * Return: Always 0 (Success)
+ * numbers from n to 98
+ * Return: nothing
  */
-void print_int(int value)
+void print_to_98(int n)
 {
-	if (value != 0)
+	int i;
+
+	if (n < 98)
 	{
-		print_int(value / 10);
-		_putchar((value % 10) + '0');
-	}
-}
-
-
-/**
- * print_to_98 - return print_to_98
- *@n1: n1
- *
- * Return: Always 0 (Success)
- */
-void print_to_98(int n1)
-{
-	int sum, des;
-
-	if (n1 > 98)
-	{
-		sum = -1;
-		des = 97;
+		for (i = n ; i <= 98 ; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+		printf("\n");
 	}
 	else
 	{
-		sum = 1;
-		des = 99;
-	}
-	for (; n1 != des;)
-	{
-		if (n1 == 0)
+		if (n > 98)
 		{
-			_putchar('0');
+			for (i = n ; i >= 98 ; i--)
+			{
+				printf("%d", i);
+				if (i != 98)
+					printf(", ");
+			}
+			printf("\n");
 		}
 		else
 		{
-			if (n1 < 0)
-			{
-				_putchar('-');
-				print_int(-n1);
-			}
-			else
-			{
-				print_int(n1);
-			}
+			printf("%d\n", n);
 		}
-		if (n1 != 98)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-		n1 = n1 + sum;
 	}
-	_putchar('\n');
 }
