@@ -1,0 +1,12 @@
+#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * mul - multiply to integers.
+ *@mul: - multiplication.
+ * Return: (axb).
+ */
+int mul(int a, int b)
+{
+	return (a * b);
+}
