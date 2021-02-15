@@ -1,0 +1,1 @@
+this project is about ponters, arrays and stings. it is a bit confused but afterall it make sense
