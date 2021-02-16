@@ -1,32 +1,21 @@
 #include "holberton.h"
-
+#include "2-strlen.c"
 /**
- * puts_half - 1/2
- *@str: poniter
+ * puts_half - !n
+ * @str: String
  *
- * Return: void.
+ * Return: Nothing
  */
 void puts_half(char *str)
 {
-	int i, j, n;
+	int len = _strlen(str), i = 0, j = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-	}
-
-	if (i % 2 != 0)
-	{
-		n =  ((i - 1) / 2);
-	}
+	if (len % 2 != 0)
+		j = len - ((len - 1) / 2);
 	else
-	{
-		n = i / 2;
-	}
+		j = len - (len / 2);
 
-	for (j = n; j <= i; j++)
-	{
-		_putchar(str[j]);
-	}
-
+	for (i = j ; i < len ; i++)
+		_putchar(str[i]);
 	_putchar('\n');
 }
