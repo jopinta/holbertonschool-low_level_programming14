@@ -1,20 +1,20 @@
 #include "holberton.h"
-
+#include "2-strlen.c"
 /**
- * _strcpy - copy
- *@dest: dest
- *@src: src
+ * _strcpy - ul
+ * @dest: des
+ * @src: src
  *
- * Return: void.
+ * Description: Copy a string from source to destination
+ * Return: string destination
  */
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = 0, len = _strlen(src);
 
-	for (i = 0; src[i] != '\0'; i++)
+	for (i = 0 ; i <= len ; i++)
 	{
 		dest[i] = src[i];
 	}
-
 	return (dest);
 }
