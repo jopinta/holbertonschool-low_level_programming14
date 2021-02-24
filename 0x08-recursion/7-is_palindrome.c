@@ -1,57 +1,60 @@
 #include "holberton.h"
 
+
 /**
- * palindrome_check - checks if the string is palindrome
- * @c: the string given
- * @left: the left half of the string
- * @right: the right half of the string
- * ------------------------------------------------
- * Return: 1 if is palindrome, 0 if not
+ *_pali - calc palin
+ *@s: the string
+ *@i: iter
+ *@l: lenhth
+ *-----------------------------------------------------
+ *Return: int
  */
-int palindrome_check(char *c, int left, int right)
+int _pali(char *s, int i, int l)
 {
-	if (c[left] == c[right])
+	if (i < l)
 	{
-		palindrome_check(c, left + 1, right - 1);
-		return (1);
+		if (s[i] == s[l])
+		{
+			return (_pali(s, i + 1, l - 1));
+		}
+		else
+			return (0);
 	}
 	else
-		return (0);
-
-	return (0);
+		return (1);
 }
 
+
 /**
- * my_strlen - get the length of a string
- * @s:the string given
- * --------------------------------
- * Return: the length
+ *_strlen_recursion - print a int in form recurisive
+ *and contain the length the string
+ *@s: the string
+ *-----------------------------------------------------
+ *Return: int
  */
-int my_strlen(char *s)
+int _strlen_recursion(char *s)
 {
 	int n = 0;
 
 	if (*s != '\0')
-		n = n + my_strlen(s + 1);
-	else
-		return (0);
-
-	n++;
+	{
+		s++;
+		n = _strlen_recursion(s);
+		n++;
+	}
 
 	return (n);
 }
 
-
 /**
- * is_palindrome - check if a given string is palindrome
- * @s: the string given
- * --------------------------------------------
- * Return: 1 if is palindrome, 0 if not
+ *is_palindrome - palindrome
+ *@s: string
+ *--------------------------
+ *Return: int
  */
 int is_palindrome(char *s)
 {
-	if (s[0] == 0)
-		return (0);
+	int n = _pali(s, 0, _strlen_recursion(s) - 1);
 
-	return (palindrome_check(s, 0, (my_strlen(s) - 1)));
+	return (n);
 }
