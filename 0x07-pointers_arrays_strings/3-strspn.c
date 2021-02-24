@@ -1,28 +1,31 @@
 #include "holberton.h"
 /**
- * _strspn - function that copies memory area
- * @s: destiny character
- * @accept: source character
+ * _strspn - Entry point
+ * @s: String
+ * @accept: String
  *
- * Return: number of bytes.
+ * Description: Gets the length of a prefix
+ * Return: number of bytes in the initial segment
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0, ii = 0, bytes = 0;
+	int i = 0, j = 0, flag = 1;
+	unsigned int ret = 0;
 
-	for (; s[i] != '\0'; i++)
+	for (i = 0 ; s[i] != '\0' ; i++)
 	{
-		for (; *(accept + ii) != '\0'; ii++)
+		flag = 1;
+		for (j = 0 ; accept[j] != '\0' ; j++)
 		{
-			if (s[i] == accept[ii])
+			if (s[i] == accept[j])
 			{
-				bytes++;
-				i++;
-			}
-			if (s[i] != accept[ii] && accept[ii] == '\0')
+				ret++;
+				flag = 0;
 				break;
+			}
 		}
-		ii = 0;
+		if (flag)
+			break;
 	}
-	return (bytes);
+	return (ret);
 }
