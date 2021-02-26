@@ -1,0 +1,1 @@
+project about libraries (statics and dynamics)
