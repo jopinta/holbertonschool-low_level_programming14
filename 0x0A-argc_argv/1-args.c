@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+/**
+ * main - the main fuction of the program
+ * @argc: the array index for each command flag
+ * @argv: the array of commands flags
+ * ----------------------------
+ * Return: void
+ */
+int main(int argc, char *argv[])
+{
+argv[0] = argv[0];
+
+printf("%d\n", argc - 1);
+
+return (0);
+}
