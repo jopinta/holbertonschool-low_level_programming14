@@ -1,0 +1,36 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ *_strdup - The strdup() function returns a pointer to a new string which is
+ * a duplicate of the string s.  Memory for the new string is
+ * obtained with malloc(3), and can be freed with free(3)..
+ *@str: string
+ * Return: Always 0.
+ */
+
+char *_strdup(char *str)
+{
+int len = 0;
+char *ret = NULL;
+int i = 0;
+if (str)
+{
+/* Cuento caracteres */
+for (len = 0; str[len] != '\0'; len++)
+{}
+/* reservo memoria */
+ret = malloc((sizeof(char) * len) + 1);
+if (ret == NULL)
+return (NULL);
+{}
+/* copio los datos */
+for (i = 0; i < len; i++)
+{
+ret[i] = str[i];
+}
+ret[i] = '\0';
+}
+return (ret);
+}
