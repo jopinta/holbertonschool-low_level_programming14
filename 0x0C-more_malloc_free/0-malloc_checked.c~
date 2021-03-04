@@ -1,0 +1,22 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
+/**
+ * malloc_checked - should cause normal termination with a value of 98
+ *@b: unsig int
+ * Return: Always 0.
+ */
+void *malloc_checked(unsigned int b)
+{
+void *n;
+
+n = malloc(b);
+
+if (n == NULL)
+{
+exit(98)
+}
+return (n);
+}
