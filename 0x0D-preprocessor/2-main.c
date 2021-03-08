@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- *main - check the code
- *@void
+ *
+ *@void - similar
  *return: always
  */
 int main(void)
