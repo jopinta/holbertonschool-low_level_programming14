@@ -2,8 +2,8 @@
 
 /**
  *main - check the code
- *
- *
+ *@void
+ *return: always
  */
 int main(void)
 {
