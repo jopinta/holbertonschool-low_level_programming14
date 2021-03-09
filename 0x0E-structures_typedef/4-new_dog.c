@@ -1,59 +1,52 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
-
+#include <stdlib.h>
 /**
- * _strdup - duplicate a string
- * @str: string a copiar
+ * new_dog - makes a dog
  *
- * Return: pointer of the duplicated string.
- */
-char *_strdup(char *str)
-{
-	char *strdup;
-	int i, ii;
-
-	if (str == NULL)
-		return (NULL);
-	for (ii = 0; str[ii] != '\0'; ii++)
-	{
-	}
-	strdup = malloc(ii + 1);
-	if (strdup == NULL)
-		return (NULL);
-	for (i = 0; i < ii; i++)
-		strdup[i] = str[i];
-	return (strdup);
-}
-
-/**
- *new_dog - create a new dog.
- * @name: name of new dog
- * @age: age of new dog
- * @owner: owner of new dog
- * Return: structure newDog
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
+ *
+ * Return: pointer to dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newDog;
+	dog_t *d;
+	int len;
+	char *ptr;
 
-	if (!name || !owner)
+	if (name == 0 || owner == 0)
 		return (NULL);
-	newDog = malloc(sizeof(dog_t));
-	if (!newDog)
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
 		return (NULL);
-	newDog->age = age;
-	newDog->name = _strdup(name);
-	newDog->owner = _strdup(owner);
 
-	if (!newDog->name || !newDog->owner)
+	for (len = 1, ptr = name; *ptr; len++)
+		ptr++;
+	d->name = malloc(len);
+	if (d->name == 0)
 	{
-		if (!newDog->name)
-			free(newDog->owner);
-		else
-			free(newDog->name);
-		free(newDog);
+		free(d);
 		return (NULL);
 	}
-	return (newDog);
+
+	for (len = 1, ptr = owner; *ptr; len++)
+		ptr++;
+	d->owner = malloc(len);
+	if (d->owner == 0)
+	{
+		free(d->name);
+		free(d);
+		return (NULL);
+	}
+
+	for (len = 0; *name != 0; len++, name++)
+		d->name[len] = *name;
+	d->name[len] = 0;
+	for (len = 0; *owner != 0; len++)
+		d->owner[len] = *owner++;
+	d->owner[len] = 0;
+	d->age = age;
+
+	return (d);
 }
