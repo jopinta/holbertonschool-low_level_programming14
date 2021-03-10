@@ -1,19 +1,23 @@
 #include "3-calc.h"
+
 /**
- * op_add - addition of two numbers
- *
- * @a: number one
- * @b: number two
+ * op_add - operation addition
+ * @a: first integer
+ * @b: second integer
+ * -------------------------
+ * Return: operation
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
+
 /**
- * op_sub - difference of two numbers
- *
- * @a: number one
- * @b: number two
+ * op_sub - operation substrain
+ * @a: first integer
+ * @b: second integer
+ * -------------------------
+ * Return: operation
  */
 int op_sub(int a, int b)
 {
@@ -21,10 +25,11 @@ int op_sub(int a, int b)
 }
 
 /**
- * op_mul - multiplication of two numbers
- *
- * @a: number one
- * @b: number two
+ * op_mul - operation multiply
+ * @a: first integer
+ * @b: second integer
+ * -------------------------
+ * Return: operation
  */
 int op_mul(int a, int b)
 {
@@ -32,10 +37,11 @@ int op_mul(int a, int b)
 }
 
 /**
- * op_div - division of two numbers
- *
- * @a: number one
- * @b: number two
+ * op_div - operation division
+ * @a: first integer
+ * @b: second integer
+ * -------------------------
+ * Return: operation
  */
 int op_div(int a, int b)
 {
@@ -43,10 +49,11 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - modulo of two numbers
- *
- * @a: number one
- * @b: number two
+ * op_mod - operation module
+ * @a: first integer
+ * @b: second integer
+ * -------------------------
+ * Return: operation
  */
 int op_mod(int a, int b)
 {
