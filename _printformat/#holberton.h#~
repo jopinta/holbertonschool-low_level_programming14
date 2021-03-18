@@ -1,0 +1,22 @@
+#ifndef PFORMAT
+#define PFORMAT
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdio.h>                                                                                                                                                         
+
+
+typedef struct str
+{
+
+		char*cal;
+		int(*f)(va_list);
+
+} formatted;
+
+int _printf(const char *format, ...);
+
+int print_casual(char cha);
+
+
+#endif 

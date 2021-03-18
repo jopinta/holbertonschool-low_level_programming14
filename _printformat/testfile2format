@@ -1,0 +1,57 @@
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+
+/**
+*_printf - print as required
+*
+*@format
+*
+*
+*/
+
+
+int _printf(const char *format,...)
+{
+	va_list list;
+	int leng = 0;
+	int J = 0, i;
+
+
+	type formatted[] = {
+	     {"c", _pchar},
+	     {"s", _pstring},
+	     {"%", _pmodule},
+	     {"i", _pinteger},
+	     {"d", _pdigit},
+	     {NULL, NULL},
+);
+
+
+va_start (list, format);
+while (format && format[j] != '\0')
+{
+	i = 0
+	if (format[j] == '%')
+   	      {
+		 j += 1;
+		while (formatted[i].cal != NULL)
+      		{
+			if (format[j] == formatted[i].cal[0])
+			{
+				leng += formatted[i].f(list);
+				break;
+			}
+			i++
+	       	}
+	}
+	else
+	{
+			{leng += print_casual(format[j]);
+		}
+		j++;
+	}
+	va_end (list);
+       return(leng);
+}
