@@ -1,0 +1,1 @@
+Project about linked list, adding deleting pop functions ainda mais
