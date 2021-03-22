@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_listint - to print elementsof a list
+ *@h: ptr to struct
+ * Return: nodes
  */
 
 size_t print_listint(const listint_t *h)
@@ -16,11 +16,11 @@ size_t print_listint(const listint_t *h)
 
 	while (h)
 	{
-			printf("%s\n", h->n);
+		printf("%i\n", h->n);
 		nodo++;
 
 		h = h->next;
 	}
 
-	return (cont);
+	return (nodo);
 }
