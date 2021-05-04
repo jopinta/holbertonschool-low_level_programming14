@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "2-strlen.c"
 /**
  * _strcpy - ul
  * @dest: des
@@ -10,11 +9,11 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-  int i = 0, len = _strlen(src);
+int i = 0, len = _strlen(src);
 
-  for (i = 0 ; i <= len ; i++)
-    {
-      dest[i] = src[i];
-    }
-  return (dest);
- }
+for (i = 0 ; i <= len ; i++)
+{
+dest[i] = src[i];
+}
+return (dest);
+}
