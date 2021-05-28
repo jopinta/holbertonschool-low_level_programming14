@@ -4,9 +4,8 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code for Holberton School students.
- *@hash_table_t size of the array
- *@size size of array
+ *hash_table_create - check the code for Holberton School students.
+ *@size: size of array
  * Return: Always EXIT_SUCCESS.
  */
 hash_table_t *hash_table_create(unsigned long int size)
